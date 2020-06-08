@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<title>Error ! </title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='error.css') }}">
+</head>
+
+<body>
+<div id="main">
+    	<div class="fof">
+        		<h1> 500 - Internal Server Error</h1>
+<p>What you were looking for is just not there.
+  <p><a href="{{ url_for('index') }}">Go Somewhere Nice</a>
+    	</div>
+</div>
+</body>
+
+</html>

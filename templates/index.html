@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow: hidden">
+<head>
+    <meta charset="UTF-8">
+    <title>F.R.I</title>
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='particles.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+    <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script>
+        function scanMessage() {
+            document.getElementById("myButton")
+            document.getElementById("load").innerHTML = "Detecting Face(s), Please be patient. Machines Take Time";
+        }
+
+
+        $(document).ready(
+            function(){
+                $('input:file').change(
+                    function(){
+                        if ($(this).val()) {
+                            $('input:submit').attr('disabled',false);
+                            // or, as has been pointed out elsewhere:
+                            // $('input:submit').removeAttr('disabled');
+                        }
+                    }
+                );
+            });
+    </script>
+
+
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-light navbar-fixed-top container-fluid">
+
+
+    <a class="navbar-brand" href="{{ url_for('index') }}">
+        <img src="{{url_for('static', filename='logo.png')}}" width="160" height="67" class="d-inline-block align-top" alt="">
+    </a>
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main" style="border-color: coral;background-color: coral;">
+            <span class="sr-only" style="border-color: coral;background-color: coral;">Toggle Navigation</span>
+            <span class="icon-bar" style="border-color: coral;background-color: coral;"></span>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-main">
+        <ul class="nav navbar-nav navbar-right" style=" margin-top:8px">
+            <li><a class="active" href="{{ url_for('index') }}"><b style="color: black">Home</b></a></li>
+            <li><a href="https://www.tamanbir.in"><b style="color: black">About the developer</b></a></li>
+
+        </ul>
+    </div>
+
+</nav>
+
+
+
+<div class="container">
+    <div class="row" style="margin-top: 20%; height: 700px" id="section1">
+        <div class="col-md-12">
+       <div data-aos="fade-up" data-aos-duration="2000">
+            <h1 style="text-align: center; font-size: 4em ;font-family: 'Alata', sans-serif; color: black;">Welcome to F.R.I</h1>
+       </div>
+            <div data-aos="fade-down" data-aos-duration="2000">
+                <h1 style="text-align: center; font-size: 2em ;font-family: 'Alata', sans-serif; color: coral">Facial Recognition and Identification</h1>
+            </div>
+            <div data-aos="zoom-in" data-aos-duration="2000">
+                <h3 style="text-align: center; font-family: 'Alata', sans-serif;"><a href="#section2" style="color :teal"> Start </a> </h3>
+            </div>
+        </div>
+</div>
+
+
+
+    <div class="row" style=" padding-top: 20%;height: 700px" id="section2">
+        <div class="col-md-12">
+            <div data-aos="fade-right" data-aos-duration="2000">
+                <h1 style="text-align: center; font-size: 4em ;font-family: 'Alata', sans-serif; color: black;">About F.R.I ?</h1>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="2000">
+                <p style="text-align: center; font-size:1.5em ;font-family: 'Alata', sans-serif; color: coral">Facial Recognition and Identification, gives you the actual feel on how Computer Vision works.</p>
+                <p style="text-align: center; font-size:1.5em ;font-family: 'Alata', sans-serif; color: coral">Aiming to identify faces in the video, and the best part it's completely Free</p>
+                <div data-aos="zoom-in" data-aos-duration="2000">
+                <h3 style="text-align: center; font-family: 'Alata', sans-serif;"><a href="#section3" style="color :teal"> So let's Go !  </a> </h3>
+                </div>
+                </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="row" style=" padding-top: 8%;height: 800px" id="section3">
+        <div class="col-md-12">
+            <div data-aos="fade-right" data-aos-duration="2000">
+                <h1 style="text-align: center; font-size: 4em ;font-family: 'Alata', sans-serif; color: black;">How Does this work?</h1>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="2000">
+                <p style="text-align: center; font-size:1.4em ;font-family: 'Alata', sans-serif; color: coral">Watch this short tutorial on how to upload your pic to F.R.I.</p>
+                <video width="300" height="220" style="margin-left: 36%" controls>
+                    <source src="{{ url_for('static', filename='FRISample.mp4')}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div>
+                    <h3 style="text-align: center; font-family: 'Alata', sans-serif;"><a href="#section4" style="color :teal"> Yeah I watched, it please continue !  </a> </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row" style="padding-top: 13%;height: 650px" id="section4">
+        <div class="col-md-12">
+            <div data-aos="fade-up-right" data-aos-duration="2000">
+                <h1 style="text-align: center; font-size: 3.5em ;font-family: 'Alata', sans-serif; color: black;">Before We Proceed Further</h1>
+            </div>
+            <div data-aos="fade-down-left" data-aos-duration="2000">
+                <p style="text-align: center; font-size:1.5em ;font-family: 'Alata', sans-serif; color: coral">Upload your face photo in such a way that your face is clearly visible with proper light.</p>
+                <p style="text-align: center; font-size:1em ;font-family: 'Alata', sans-serif; color: coral">Upload image as your NAME. Example- John Smith.jpg and click <b>SUBMIT</b> before proceeding further</p>
+                <div class="alert alert-info" role="alert"><b>*The dataset is reset every 24 hr </b></div>
+            </div>
+
+
+
+        <div data-aos="fade-right" data-aos-duration="3000" style="margin-left: 46%">
+            <img src="{{url_for('static', filename='user.jpg')}}" style="height: 80px; width: 150px;"/>
+        </div>
+            <div class="content" style="margin-left: 35%; ">
+                <p style="font-size:0.7em; margin-left: 35%;">
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                <ul class=flashes>
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% endwith %}
+                </p>
+
+
+                <form method="post" style="margin: 0 auto; width:700px;" action="/" enctype="multipart/form-data">
+                    <input type="file" name="file" autocomplete="off" required>
+                    <p>
+                        <input type="submit" value="Submit">
+                    </p>
+                </form>
+            </div>
+                <div>
+                    <h4 style="text-align: center; font-family: 'Alata', sans-serif;"><a href="#section5" style="color :teal"> Take me to next Step !  </a> </h4>
+                </div>
+            </div>
+    </div>
+
+    <div class="row" style="margin-top: 37%; height: 510px" id="section5">
+        <div class="col-md-12">
+            <div data-aos="fade-right" data-aos-duration="2000">
+                <h1 style="text-align: center; font-size: 3em ;font-family: 'Alata', sans-serif; color: black;">Now comes the fun part</h1>
+
+            <div data-aos="fade-up-left" data-aos-duration="2000">
+                <p style="text-align: center; font-size:1.5em ;font-family: 'Alata', sans-serif; color: coral">Upload your video, Make sure the angle of your camera is good and light is proper</p>
+                <p style="text-align: center; font-size:1em ;font-family: 'Alata', sans-serif; color: coral">Since F.R.I performs Recognition frame by frame and takes time to process each frame, It will by default scan only first 10 seconds of the video</p>
+                <p style="text-align: center; font-size:1em ;font-family: 'Alata', sans-serif; color: coral">To decrease the processing time, we would be scanning 30 frames every second by default </p>
+                <div class="alert alert-warning" role="alert"><b>*Make sure you upload 24-30 FPS video, or you will Receive an Error </b></div>
+            </div>
+
+            <form method="post" style="margin: 0 auto;" action="http://127.0.0.1:5000/facerecognition.html" enctype="multipart/form-data" required>
+                <h4 style="margin-left: 25%; color: black;"><b>Upload Video </b></h4>
+                <input type="file" name="fileToUpload" id="fileToUpload" style="display: block; margin-left: 25%" accept="video/*">
+                <div>
+                    <br>
+                <label style="color: black; font-size: 1em; margin-left: 25%">Enter Number of video seconds to process </label>
+                <input class="form-control" type="text"  value="10" name="videoTime" title="Leave none for default, enter none to process full video" placeholder="Leave none for default" style=" color: black;width:500px;margin-left: 25%" />
+                <!-- <label style="color: black; font-size: 0.8em">Enter Number of seconds to process 1 frame</label>
+                <p style="color: black; font-size: 0.8em ">If you enter 1, it will process 30 frame every 1 second, So greater number means Faster Processing, less frames and less accuracy  </p> -->
+                </div>
+                    <input class="form-control" type="hidden" value="1" name="fps" title="Leave none for default" placeholder="Leave none for default"  style=" color: black;width:500px;margin-left: 35%"" />
+                <br>
+                <input type="submit" value="Submit and Identify" id="myButton" name="submit" onclick="scanMessage()" style="background-color: teal;color:white;border:0;padding:10px 20px;text-align:center;margin: 0 auto;width:300px;display: block;" disabled>
+            </form>
+        <p id="load" style="color: black ;text-align:center;"> </p>
+</div>
+    </div>
+</div>
+    <br>
+    <br>
+
+    <footer>
+
+
+        <div class="container">
+            <p class="m-0 text-center text-white small">Copyright &copy; FRI 2020, &nbsp; &nbsp; <a href="{{ url_for('copyright') }}">Terms and Copyright</a></p>
+        </div>
+    </footer>
+<div id="particles-js">
+</div>
+
+<script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+</script>
+</div>
+
+
+</body>
+</html>

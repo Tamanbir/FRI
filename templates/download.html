@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html style="overflow: hidden">
+<head>
+  <meta charset="UTF-8">
+  <title>Download | FRI</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+  <script type="text/javascript" src="{{ url_for('static', filename='particles.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+  <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+<body>
+<nav class="navbar navbar-light navbar-fixed-top container-fluid">
+
+
+  <a class="navbar-brand" href="{{ url_for('index') }}">
+    <img src="{{url_for('static', filename='logo.png')}}" width="160" height="67" class="d-inline-block align-top" alt="">
+  </a>
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main" style="border-color: coral;background-color: coral;">
+      <span class="sr-only" style="border-color: coral;background-color: coral;">Toggle Navigation</span>
+      <span class="icon-bar" style="border-color: coral;background-color: coral;"></span>
+    </button>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse-main">
+    <ul class="nav navbar-nav navbar-right" style=" margin-top:8px">
+      <li><a class="active" href="#"><b style="color: black">Home</b></a></li>
+      <li><a href="https://www.tamanbir.in"><b style="color: black">About Me / Contact</b></a></li>
+
+
+
+    </ul>
+  </div>
+
+</nav>
+
+
+
+
+<div class="container">
+
+  <div class="row" style="margin-top: 20%;height: 700px">
+    <div class="col-md-12">
+      <div data-aos="fade-up" data-aos-duration="2000">
+        <h1 style="text-align: center; font-size: 4em ;font-family: 'Alata', sans-serif; color: black;">Your Video Has Been Processed</h1>
+      </div>
+      <div data-aos="fade-down" data-aos-duration="2000">
+        <p style="text-align: center; font-size:2em ;font-family: 'Alata', sans-serif; color: coral"><a href='templates/facerecognitionvideo.avi' download><b style="color: coral " >Download Video</b></a></p>
+            </div>
+    </div>
+</div>
+</div>
+  <div id="particles-js">
+  </div>
+
+<script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+</script>
+
+</body>
+</html>
