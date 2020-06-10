@@ -1,4 +1,5 @@
 ![](https://raw.githubusercontent.com/Tamanbir/FRI/master/templates/logo.png?token=ACOAFMEAOAIJFCFZB7TJVT264E5WO)
+# F.R.I
 ### Facial Recogniton and Identification
 
 
