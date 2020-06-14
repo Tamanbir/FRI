@@ -1,4 +1,4 @@
-Flask==0.10.1
+Flask==1.0
 face-recognition==1.2.3
 dlib==19.8.1
 face_recognition_models
