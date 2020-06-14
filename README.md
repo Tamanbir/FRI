@@ -20,4 +20,4 @@ Then, install this module from pypi using pip3 (or pip2 for Python 2):
 ## Install the requirements
 `pip3 install -r requirements.txt`
 
-
+**Note: One need to set your own face upload directory through final.py**
